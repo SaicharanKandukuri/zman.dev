@@ -2,4 +2,10 @@
   import "../app.css";
 </script>
 
-<slot />
+<div class="dark">
+  <slot ><!-- optional fallback --></slot>
+</div>
+
+<style>
+  
+</style>
