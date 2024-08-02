@@ -1,6 +1,7 @@
 "use client";
 import RetroGrid from "@/components/magicui/retro-grid";
 import Image from "next/image";
+import SpotifyPlayer from "@/components/SpotifyPlayer";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
         zman.dev
       </span>
       <RetroGrid />
+      <SpotifyPlayer />
     </main>
   );
 }
-
