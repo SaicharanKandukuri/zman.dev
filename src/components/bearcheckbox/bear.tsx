@@ -104,7 +104,6 @@ export default function BearButton() {
                 .to(pawRef.current, {
                     duration: pawDuration,
                     scaleX: 0.8,
-                    onComplete: () => set(swearRef.current, { display: 'none' }),
                 })
                 .to(
                     bgRef.current,
