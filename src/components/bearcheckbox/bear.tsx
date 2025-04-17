@@ -30,6 +30,11 @@ export default function BearButton() {
     const indicatorRef = useRef(null)
     const { theme, setTheme } = useTheme()
 
+    const playFlashbang = () => {
+        const audio = new Audio('/throwing-flashbang-sound-effect-cs-go.mp3');
+        audio.play();
+    };
+
     const onHover = () => {
         if (Math.random() > 0.5 && count > armLimit) {
             to(bearRef.current, bearDuration / 2, { y: '40%'} )
@@ -43,12 +48,15 @@ export default function BearButton() {
     }
 
     const onChange = () => {
+        playFlashbang();
         if (checked) {
             console.log(checked)
             return
         }
         setChecked(true)
-        setTheme('light')
+        setTimeout(() => {
+            setTheme('light')
+        }, 2200); // Delay matches the boom in the audio
     }
 
     useEffect(() => {
